@@ -1,34 +1,70 @@
+import promptAction from '@ohos.promptAction';
+
 @Entry
 @Component
 struct Index {
   @State message: string = 'Hello World';
+  //网络图片需要添加网络访问权限
+  imgUrl: string = "https://www.baidu.com/img/flexible/logo/pc/result.png"
+  imgUrl2: string = "https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png"
 
   build() {
     Row() {
-      Stack() {
+      Column({ space: 20 }) {
+        Row() {
+          //默认展示原有图片尺寸
+          //默认保持原有宽高比
+          // Image($r("app.media.baidu_img"))
+          Image(this.imgUrl)
+            .width(180)
+        }
+        .width("100%")
+        .justifyContent(FlexAlign.Center)
 
+        Row() {
+          TextInput()
+            .type(InputType.Normal)
+            .layoutWeight(1)
+            .border({
+              width: 2,
+              color: '#ff928c8c'
+            })
+            .borderRadius({
+              topLeft: 4,
+              bottomLeft: 4
+            })
+            .height(40)
+            .onChange((inputString: string) => {
+              this.message = inputString
+            })
+          Button("百度一下")
+            .width(80)
+            .height(40)
+            .type(ButtonType.Normal)
+            .borderRadius({
+              topRight: 4,
+              bottomRight: 4
+            })//将TextInput右侧的边盖住
+            .translate({
+              x: -2
+            })
+            .onClick(() => {
+              promptAction.showToast({
+                message: this.message,
+                duration: 2000,
+                bottom: 20
+              })
+            })
 
-        Image($r("app.media.baidu_img"))
-          .width("100%")
-          .backgroundColor(Color.Blue)
-        Text(this.message)
-          .fontSize(20)
-          .fontWeight(FontWeight.Bold)
-          .textAlign(TextAlign.Center)
-          .width("100%")
-          .fontColor(Color.White)
-          .offset({
-            x: 0,
-            y: -60
-          })
-          .translate({
-            x: 10,
-            y: 10
-          })
+        }
+        .padding({
+          left: 20,
+          right: 20
+        })
+        .width("100%")
 
       }
       .width('100%')
-
     }
     .height('100%')
 
