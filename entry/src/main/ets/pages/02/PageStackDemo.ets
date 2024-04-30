@@ -4,6 +4,18 @@ struct PageStackDemo {
   @State message: string = 'Hello World';
 
   //练习堆叠布局 stack
+  /**
+   * Stack的参数 可以设置子组件的排列方式-alignContent
+   ● Top(顶部)
+   ● TopStart（左上角）
+   ● TopEnd（右上角）
+   ● Start（左侧）
+   ● End（右侧）
+   ● Center（中间）
+   ● Bottom（底部）
+   ● BottomStart（左下角）
+   ● BottomEnd(右下角)
+   */
   build() {
     Row() {
       Column() {
