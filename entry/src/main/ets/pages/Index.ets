@@ -11,15 +11,23 @@ struct Index {
   build() {
     Row() {
       Column({ space: 20 }) {
-        Row() {
+        Stack() {
           //默认展示原有图片尺寸
           //默认保持原有宽高比
           // Image($r("app.media.baidu_img"))
           Image(this.imgUrl)
             .width(180)
+          Text("黑马版")
+            .width(60)
+            .fontSize(12)
+            .fontColor("#000")
+            .translate({
+              x:70,
+              y:-10
+            })
+
         }
         .width("100%")
-        .justifyContent(FlexAlign.Center)
 
         Row() {
           TextInput()

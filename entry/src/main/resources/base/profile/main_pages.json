@@ -1,5 +1,8 @@
 {
   "src": [
-    "pages/Index"
+    "pages/Index",
+    "pages/02/PageStackDemo",
+    "pages/01/PageCommonLayout",
+    "pages/02/PageFontJump"
   ]
 }
