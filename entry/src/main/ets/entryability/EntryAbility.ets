@@ -16,7 +16,8 @@ export default class EntryAbility extends UIAbility {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
 
     // windowStage.loadContent('pages/Index', (err) => {
-    windowStage.loadContent( 'pages/02/PageFontJump', (err) => {
+    // windowStage.loadContent( 'pages/02/PageFontJump', (err) => {
+    windowStage.loadContent( 'pages/01/PageCommonLayout2', (err) => {
       if (err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
         return;

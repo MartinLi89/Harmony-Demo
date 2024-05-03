@@ -2,7 +2,8 @@
   "src": [
     "pages/Index",
     "pages/02/PageStackDemo",
-    "pages/01/PageCommonLayout",
-    "pages/02/PageFontJump"
+    "pages/01/PageCommonLayout1",
+    "pages/02/PageFontJump",
+    "pages/01/PageCommonLayout2"
   ]
 }
