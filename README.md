@@ -15,5 +15,4 @@
 
 #### 特技
 
-![本地地图](test.jpg)
-
+![本地地图](images/entry_tree.png)
