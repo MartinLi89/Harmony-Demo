@@ -30,6 +30,25 @@ struct PageCommonLayout {
             width: 2
           })
 
+        Text(){//
+          Span("ttsfs")
+            .fontSize("20")
+        }
+          .fontSize(30)//文字大小
+          .fontWeight(FontWeight.Bold)//粗体
+          .textAlign(TextAlign.Start)//文字对齐方式
+          .constraintSize({
+            //最小最大设置设置约束尺寸，组件布局时，进行尺寸范围限制。constraintSize的优先级高于Width和Height。
+            // 若设置的minWidth大于maxWidth，则minWidth生效，minHeight与maxHeight同理。
+            minHeight: 10,
+            minWidth: 50
+          })
+          .backgroundColor(Color.Green)//背景色
+          .border({
+            //有个盒子的概念，以及盒子的边距
+            width: 2
+          })
+
         //只能单行显示
         TextInput({
           placeholder: '我是提示文本,很多个字，很多个字，很多个字，很多个字，很多个字，很多个字，很多个字很多个字，很多个字，很多个字，很多个字'

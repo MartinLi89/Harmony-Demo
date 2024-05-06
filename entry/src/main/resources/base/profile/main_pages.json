@@ -7,6 +7,10 @@
     "pages/01/PageButtonDemo2",
     "pages/01/PageButtonDemo1",
     "pages/01/PageCheckboxDemo",
-    "pages/01/PageImageDemo"
+    "pages/01/PageImageDemo",
+    "pages/02/PageFlexDemo",
+    "pages/02/PageToastDemo",
+    "pages/02/PageListDemo",
+    "pages/02/PageRowDemo"
   ]
 }
